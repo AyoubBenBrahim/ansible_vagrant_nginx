@@ -33,6 +33,7 @@
 
   - name: copy the nginx config file and restart nginx
     become: yes
+    become_method: sudo
     template:
       src: /Users/aybouras/Desktop/ansible-book/provisioning/default
       dest: /etc/nginx/sites-available/default
